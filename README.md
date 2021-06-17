@@ -15,15 +15,15 @@ Overview of REMOD model architecture is demonstrated in Figure 1. In this framew
 ## Running the code
 
 * REMOD-BiModal: code of REMOD model and training/evaluating scripts.
-+ train.sh: the training script of REMOD. Data files in pickle format are needed. Pretrained models in both text and graph modalities can be used. The training can be started with command `bash train.sh`. An output directory will be generated and store checkpoints and results.
-+ model.py: definitions of model structure in Pytorch
-+ main.py: training and evaluating scripts, called in train.sh and test.sh
+  + train.sh: the training script of REMOD. Data files in pickle format are needed. Pretrained models in both text and graph modalities can be used. The training can be started with command `bash train.sh`. An output directory will be generated and store checkpoints and results.
+  + model.py: definitions of model structure in Pytorch
+  + main.py: training and evaluating scripts, called in train.sh and test.sh
 * REMOD-Text: Ablation study with text modality only. Run in the same way as REMOD-Bi
 * REMOD-Graph: Ablation study with graph modality only. Run in the same way as REMOD-BiModal
 * script: python notebook files for analysis, open with Jupyter Notebook and run cells
-+ case_study.ipynb: do case study with existing results
-+ pr_curve.ipynb: drawing precision recall curve with existing results
-+ statistics.ipynb: calculate the statistics of dataset, which includes data amount, lengths of sentences, etc.
+  + case_study.ipynb: do case study with existing results
+  + pr_curve.ipynb: drawing precision recall curve with existing results
+  + statistics.ipynb: calculate the statistics of dataset, which includes data amount, lengths of sentences, etc.
 
 ## Citing
 
