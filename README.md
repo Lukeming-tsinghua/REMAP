@@ -4,7 +4,7 @@ Authors: Yucong Lin, Keming Lu, Sheng Yu, Tianxi Cai, Marinka Zitnik
 
 ## Overview
 
-This repository provides codes of REMOD model and training process in bi-modalities and relevant ablation study in single modality. REMOD is an approaches for multi-modal knowledge distillation ondisease relation extraction. The approach constructs a knowledge distillation framework with joint learning of knowledge graph modality and text modality. The knowledge graph consists of entity pairs of the target relations, and the texts consist of sentences related to entity pairs collected by distant supervision. The REMOD model could test on either text modality or graph modality for dealing with the missing modalityproblem.
+This repository provides codes of REMOD model and training process in bi-modalities and relevant ablation study in single modality. REMOD is an approaches for multi-modal knowledge distillation ondisease relation extraction. The approach constructs a knowledge distillation framework with joint learning of knowledge graph modality and text modality. The knowledge graph consists of entity pairs of the target relations, and the texts consist of sentences related to entity pairs collected by distant supervision. The REMOD model could test on either text modality or graph modality for dealing with the missing modality problem.
 
 ## Key Idea of REMOD
 
@@ -14,7 +14,10 @@ Overview of REMOD model architecture is demonstrated in Figure 1. In this framew
 
 ## Running the code
 
-* REMOD-BiModal
+* REMOD-BiModal: code of REMOD model and training/evaluating scripts.
++ train.sh: the training script of REMOD. Data files in pickle format are needed. Pretrained models in both text and graph modalities can be used. The training can be started with command `bash train.sh`. An output directory will be generated and store checkpoints and results.
++ model.py: definitions of model structure in Pytorch
++ main.py: training and evaluating scripts, called in train.sh and test.sh
 * REMOD-Text: Ablation study with text modality only. Run in the same way as REMOD-Bi
 * REMOD-Graph: Ablation study with graph modality only. Run in the same way as REMOD-BiModal
 * script: python notebook files for analysis, open with Jupyter Notebook and run cells
