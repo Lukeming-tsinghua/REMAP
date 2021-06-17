@@ -1,0 +1,9 @@
+transformers==2.8.0
+torch==1.7.0+cu110
+numpy==1.18.3
+tqdm==4.45.0
+scipy==1.6.2
+joblib==0.13.2
+dgl_cu110==0.6.1
+dgl==0.6.1
+scikit_learn==0.24.2
