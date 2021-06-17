@@ -10,10 +10,17 @@ This repository provides codes of REMOD model and training process in bi-modalit
 
 Overview of REMOD model architecture is demonstrated in Figure 1. In this framework, a text encoder and a graph encoder areemployed to generate embedding of source and object entities from corpus and knowledge graph respectively.Then, a score function is used to calculate probabilities of classification with entity embedding and sharedrelation embedding. Finally, a co-training loss including cross modality knowledge distillation is adopted inorder to enhance performance of relation extraction models in both modalities.
 
-![Figure 1. model architecture](model.pdf)
+![Figure 1. model architecture](https://github.com/Lukeming-tsinghua/REMOD/blob/master/model.pdf)
 
 ## Running the code
 
+* REMOD-BiModal
+* REMOD-Text: Ablation study with text modality only. Run in the same way as REMOD-Bi
+* REMOD-Graph: Ablation study with graph modality only. Run in the same way as REMOD-BiModal
+* script: python notebook files for analysis, open with Jupyter Notebook and run cells
++ case_study.ipynb: do case study with existing results
++ pr_curve.ipynb: drawing precision recall curve with existing results
++ statistics.ipynb: calculate the statistics of dataset, which includes data amount, lengths of sentences, etc.
 
 ## Citing
 
