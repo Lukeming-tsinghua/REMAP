@@ -1,0 +1,28 @@
+python -u main.py  \
+    --do_train True\
+    --do_eval True\
+    --do_pred True\
+    --train_pkl ../data/train-token-term.jl  \
+    --valid_pkl ../data/valid-token-term.jl  \
+    --pred_pkl ../data/EntityPairItems-disodiso-gold-500-token-term.jl  \
+    --distill True\
+    --output_path ./output/  \
+    --dict ../data/cui2idx.pkl  \
+    --tokenizer allenai/scibert_scivocab_uncased \
+    --text_model  ../REMOD-Text/output/allenai/scibert_scivocab_uncased_TuckER_100_0.5_epoch_19  \
+    --graph_model  ../REMOD-Graph/output/HAN_TuckER_100_0.5_epoch_99.pth  \
+    --sampleNum 12  \
+    --maxLength 256  \
+    --testRate 0.2  \
+    --trainBatchSize 4 \
+    --testBatchSize 16  \
+    --weightDecay 5e-5  \
+    --epoch 30  \
+    --lr 1e-5  \
+    --gamma 0.9  \
+    --accumulate_step 4  \
+    --nworkers 4  \
+    --pinMemory True\
+    --graphPath ../data/ \
+    --initEmbedding embedtable.npy \
+    --cuda 1

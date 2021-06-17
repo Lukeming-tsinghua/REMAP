@@ -1,0 +1,23 @@
+python -u main.py  \
+    --do_train True \
+    --do_eval True\
+    --do_pred True\
+    --train_pkl ../data/train-token-term.jl  \
+    --valid_pkl ../data/valid-token-term.jl  \
+    --pred_pkl ../data/EntityPairItems-disodiso-gold-500-token-term.jl  \
+    --dict ../data/cui2idx.pkl  \
+    --tokenizer allenai/scibert_scivocab_uncased \
+    --model allenai/scibert_scivocab_uncased  \
+    --output_path output \
+    --sampleNum 12  \
+    --maxLength 256  \
+    --testRate 0.2  \
+    --trainBatchSize 4 \
+    --testBatchSize 16  \
+    --weightDecay 5e-5  \
+    --epoch 20  \
+    --lr 1e-5  \
+    --accumulate_step 4  \
+    --nworkers 4  \
+    --pinMemory True\
+    --cuda 0
