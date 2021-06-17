@@ -8,7 +8,9 @@ This repository provides codes of REMOD model and training process in bi-modalit
 
 ## Key Idea of REMOD
 
-Overview of REMOD model architecture. In this framework, a text encoder and a graph encoder areemployed to generate embedding of source and object entities from corpus and knowledge graph respectively.Then, a score function is used to calculate probabilities of classification with entity embedding and sharedrelation embedding. Finally, a co-training loss including cross modality knowledge distillation is adopted inorder to enhance performance of relation extraction models in both modalities.
+Overview of REMOD model architecture is demonstrated in Figure 1. In this framework, a text encoder and a graph encoder areemployed to generate embedding of source and object entities from corpus and knowledge graph respectively.Then, a score function is used to calculate probabilities of classification with entity embedding and sharedrelation embedding. Finally, a co-training loss including cross modality knowledge distillation is adopted inorder to enhance performance of relation extraction models in both modalities.
+
+![Figure 1. model architecture](model.pdf)
 
 ## Running the code
 
