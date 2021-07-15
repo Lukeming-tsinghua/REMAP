@@ -1,4 +1,4 @@
-# REMOD: a Multi-Modal Knowledge Distillation methods forDisease Relation Extraction
+# Joint Learning of Language and Knowledge Graphs for Disease Relation Extraction
 
 Authors: Yucong Lin, Keming Lu, Sheng Yu, Tianxi Cai, Marinka Zitnik
 
