@@ -1,25 +1,25 @@
-# Joint Learning of Language and Knowledge Graphs for Disease Relation Extraction
+# Multimodal Learning on Graphs for Text-Based Disease Relation Extraction
 
 Authors: Yucong Lin, Keming Lu, Sheng Yu, Tianxi Cai, Marinka Zitnik
 
 ## Overview
 
-This repository provides codes of REMOD model and training process in bi-modalities and relevant ablation study in single modality. REMOD is an approaches for multi-modal knowledge distillation ondisease relation extraction. The approach constructs a knowledge distillation framework with joint learning of knowledge graph modality and text modality. The knowledge graph consists of entity pairs of the target relations, and the texts consist of sentences related to entity pairs collected by distant supervision. The REMOD model could test on either text modality or graph modality for dealing with the missing modality problem.
+This repository provides codes of REMAP model and training process in bi-modalities and relevant ablation study in single modality. REMAP is an approaches for multi-modal knowledge distillation ondisease relation extraction. The approach constructs a knowledge distillation framework with joint learning of knowledge graph modality and text modality. The knowledge graph consists of entity pairs of the target relations, and the texts consist of sentences related to entity pairs collected by distant supervision. The REMAP model could test on either text modality or graph modality for dealing with the missing modality problem.
 
-## Key Idea of REMOD
+## Key Idea of REMAP
 
-Overview of REMOD model architecture is demonstrated in Figure 1. In this framework, a text encoder and a graph encoder areemployed to generate embedding of source and object entities from corpus and knowledge graph respectively.Then, a score function is used to calculate probabilities of classification with entity embedding and sharedrelation embedding. Finally, a co-training loss including cross modality knowledge distillation is adopted inorder to enhance performance of relation extraction models in both modalities.
+Overview of REMAP model architecture is demonstrated in Figure 1. In this framework, a text encoder and a graph encoder areemployed to generate embedding of source and object entities from corpus and knowledge graph respectively.Then, a score function is used to calculate probabilities of classification with entity embedding and sharedrelation embedding. Finally, a co-training loss including cross modality knowledge distillation is adopted inorder to enhance performance of relation extraction models in both modalities.
 
 ![Figure 1. model architecture](https://github.com/Lukeming-tsinghua/REMOD/blob/master/model.pdf)
 
 ## Running the code
 
-* **REMOD-BiModal**: code of REMOD model and training/evaluating scripts.
-  + **train.sh**: the training script of REMOD. Data files in pickle format are needed. Pretrained models in both text and graph modalities can be used. The training can be started with command `bash train.sh`. An output directory will be generated and store checkpoints and results.
+* **REMOD-BiModal**: code of REMAP model and training/evaluating scripts.
+  + **train.sh**: the training script of REMAP. Data files in pickle format are needed. Pretrained models in both text and graph modalities can be used. The training can be started with command `bash train.sh`. An output directory will be generated and store checkpoints and results.
   + **model.py**: definitions of model structure in Pytorch
   + **main.py**: training and evaluating scripts, called in train.sh and test.sh
-* **REMOD-Text**: Ablation study with text modality only. Run in the same way as REMOD-BiModal
-* **REMOD-Graph**: Ablation study with graph modality only. Run in the same way as REMOD-BiModal
+* **REMOD-Text**: Ablation study with text modality only. Run in the same way as REMAP-BiModal
+* **REMOD-Graph**: Ablation study with graph modality only. Run in the same way as REMAP-BiModal
 * **script**: python notebook files for analysis, open with Jupyter Notebook and run cells
   + **case_study.ipynb**: do case study with existing results
   + **pr_curve.ipynb**: drawing precision recall curve with existing results
@@ -29,9 +29,13 @@ Overview of REMOD model architecture is demonstrated in Figure 1. In this framew
 
 TBD
 
+## Data
+
+We have shared the human annotated data which is used for evaluation of REMAP in (figshare)[https://doi.org/10.6084/m9.figshare.17776865]
+
 ## Requirements
 
-REMOD is tested to work under Python 3.6, packages required include
+REMAP is tested to work under Python 3.6, packages required include
 
 - transformers==2.8.0
 - torch==1.7.0+cu110
