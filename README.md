@@ -31,7 +31,7 @@ TBD
 
 ## Data
 
-We have shared the human annotated data which is used for evaluation of REMAP in (figshare)[https://doi.org/10.6084/m9.figshare.17776865]
+We have shared the human annotated data which is used for evaluation of REMAP in [figshare](https://doi.org/10.6084/m9.figshare.17776865)
 
 ## Requirements
 
